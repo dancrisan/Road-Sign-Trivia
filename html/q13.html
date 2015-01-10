@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../css/questions.css"></link>
+        
+        <script language='JavaScript' type='text/javascript'>
+            function check_value(fieldvalue)
+            {    
+                switch(fieldvalue)
+                {
+                    case 1:
+                        document.getElementById("imagedest").innerHTML = "<img src='../png/fail.png'>";
+                        break;
+                    case 2:
+                        document.getElementById("imagedest").innerHTML = "<img src='../png/fail.png'>";
+                        break;
+                    case 3:
+                        document.getElementById("imagedest").innerHTML = "<img src='../png/success.png'>"; 
+                        break;
+                }                
+                setTimeout(what,2000);
+            }
+
+            function what()
+			{
+                if(document.getElementById("q1c").checked)
+                {              
+					window.location.href = "q14.html";
+                }
+            }                      
+        </script>
+    </head>
+	
+    <body>
+        <div class = "container">
+            <div class="leftcolumn">
+                <span></span>
+                <img src="../png/question_13.png" style="zoom: 0.5"></img>
+            </div>
+
+            <div class="rightcolumn">
+                <div class="rightColumnContainer">
+                    <p id="questionTag">This sign indicates...</p>
+                    <ul class="multipleChoices">
+                        <br>
+                        <input type="radio" name="q1" value="a" id="q1a" onclick='check_value(1)'></input>
+                           <label for="q1a">a prohibition from turning right.</label><br></br>
+                        <input type="radio" name="q1" value="b" id="q1b" onclick='check_value(2); '></input>
+                           <label for="q1b">a sharp curve.</label><br></br>
+                        <input type="radio" name="q1" value="c" id="q1c" onclick='check_value(3)'></input>
+                           <label for="q1c">an obligation to turn right.</label><br></br>
+                    </ul>
+                </div><div class="DivHelper"></div>
+            </div>
+
+            <div id="imagedest"></div>         
+        </div>
+    </body>
+</html>
